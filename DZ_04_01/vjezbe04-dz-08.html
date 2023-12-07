@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaca 8</title>
+  </head>
+  <body>
+    <script>
+      const velika = (arr) => {
+        var novoPolje = [];
+        arr.forEach((e) => {
+          for (let i = 0; i < e.length; e++) {
+            if (e.length > 5 || /[A-Z]/.test(e[i])) {
+              novoPolje.push(e);
+            }
+          }
+        });
+        console.log(novoPolje);
+      };
+      var arr = [
+        "Ovo",
+        "je",
+        "My",
+        "prvi",
+        "komad",
+        "OF",
+        "JAVASCRIPT",
+        "koda",
+        "Koji",
+        "je",
+        "proradio",
+      ];
+      velika(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var osoba = {
+        firstName: "Marko",
+        lastName: "Maric",
+        age: 40,
+        eyeColor: "black",
+      };
+      var osoba2 = {
+        firstName: "Ante",
+        lastName: "Antic",
+        age: 30,
+        eyeColor: "blue",
+      };
+      var osoba3 = {
+        firstName: "Ivan",
+        lastName: "Ivancic",
+        age: 20,
+        eyeColor: "green",
+      };
+      for (var o in osoba) {
+        console.log(o + ": " + osoba[o]);
+      }
+      for (var o2 in osoba2) {
+        console.log(o2 + ": " + osoba2[o2]);
+      }
+      for (var o3 in osoba) {
+        console.log(o3 + ": " + osoba3[o3]);
+      }
+    </script>
+  </body>
+</html>

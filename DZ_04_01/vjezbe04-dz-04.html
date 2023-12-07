@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 12, 4, 85);
+      document.write(`Duljina je ${polje.length}<br><br>`);
+      polje.sort(function (a, b) {
+        return b - a;
+      });
+      document.write("Sortirano od najvećeg ka najmanjem:<br>");
+      polje.forEach((element) => {
+        document.write(element + "<br>");
+      });
+      document.write("<br>");
+      polje.sort(function (a, b) {
+        return a - b;
+      });
+      document.write("Sortirano od najmanjeg ka najvećem:<br>");
+      polje.forEach((element) => {
+        document.write(element + "<br>");
+      });
+      document.write("<br>");
+
+      let indexZadnji = polje.length - 1;
+      polje.splice(indexZadnji, 1);
+      console.log(polje);
+
+      polje.push(19, 22);
+      console.log(polje);
+
+      var polje2 = new Array("Banana", "Orange", "Apple", "Mango");
+      var polje_final = polje.concat(polje2);
+      console.log(polje_final);
+    </script>
+  </body>
+</html>

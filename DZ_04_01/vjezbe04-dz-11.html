@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var tempDay = [
+        "2023-11-29",
+        -1,
+        0,
+        -0.5,
+        0.5,
+        0,
+        1.2,
+        1.8,
+        2,
+        3,
+        4,
+        6,
+        9,
+        12,
+        7,
+        6,
+        6,
+        8,
+        5,
+        4,
+        2,
+        3,
+        2,
+        1,
+        0,
+      ];
+
+      function temp(tempDay) {
+        var datum = tempDay[0];
+        tempDay = tempDay.slice(1);
+        var minTemp = Math.min(...tempDay);
+        var maxTemp = Math.max(...tempDay);
+
+        let prosjek = 0;
+        tempDay.forEach((element) => {
+          prosjek = prosjek + element;
+        });
+        prosjek = prosjek / tempDay.length;
+
+        // Ispis rezultata
+        console.log("Datum:", datum);
+        console.log("Najmanja temperatura:", minTemp);
+        console.log("Najveća temperatura:", maxTemp);
+        console.log("Prosjek temperature:", prosjek);
+      }
+
+      // Poziv funkcije s zadanim poljem
+      temp(tempDay);
+    </script>
+  </body>
+</html>
